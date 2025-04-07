@@ -16,6 +16,6 @@ jobs:
     - name: list1
       run: cmd /c dir /a /s
     - name: build
-      run: echo make
+      run: make
     - name: list2
-      run: echo dir
+      run: cmd /c dir /a /s
