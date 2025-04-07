@@ -1,0 +1,21 @@
+name: test02
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: list1
+      run: cmd /c dir /a /s
+    - name: build
+      run: echo make
+    - name: list2
+      run: echo dir
