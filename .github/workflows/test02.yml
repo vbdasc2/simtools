@@ -13,9 +13,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: list1
-      run: cmd /c dir /a /s
     - name: build
       run: make
-    - name: list2
-      run: cmd /c dir /a /s
+    - name: Upload stuff
+      uses: actions/upload-artifact@v4
+      with:
+          name: simtools
+          path: .
+
